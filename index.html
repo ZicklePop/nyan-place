@@ -1,0 +1,238 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2032%2032'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%3E%F0%9F%98%B8%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2032%2032'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%3E%F0%9F%98%B8%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="mask-icon"
+      href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2032%2032'%20xmlns='http%3A//www.w3.org/2000/svg'%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%3E%F0%9F%98%B8%3C/text%3E%3C/svg%3E"
+    />
+    <title>nyan.place</title>
+    <style>
+      .font-rounded {
+        font-family: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand,
+          Comfortaa, Manjari, "Arial Rounded MT", "Arial Rounded MT Bold",
+          Calibri, source-sans-pro, sans-serif;
+      }
+
+      .bg-beam {
+        background-image: radial-gradient(
+            ellipse 50% 100% at 50% 50%,
+            oklch(100% 1 1 / 0.1),
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse 50% 100% at 55% 45%,
+            oklch(100% 1 200 / 0.1),
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse 50% 100% at 60% 50%,
+            oklch(100% 1 150 / 0.1),
+            transparent 50%
+          );
+        background-size: 200%;
+      }
+    </style>
+  </head>
+  <body
+    class="grid place-content-center min-h-svh bg-gray-500 font-rounded text-white bg-center bg-cover bg-gradient-to-bl from-pink-100 via-sky-100 to-white dark:from-stone-950 dark:via-slate-900 dark:to-stone-950 mx-1"
+  >
+    <div class="absolute inset-0 bg-beam bg-center bg-no-repeat"></div>
+    <div>
+      <header
+        class="my-3 grid place-items-center grid-cols-3 justify-between px-2 content-center rounded-xl bg-black/20 shadow-sm backdrop-blur-xl"
+      >
+        <div
+          class="place-self-start self-center flex flex-row font-semibold text-xs drop-shadow-md w-full"
+        >
+          <current-date-time data-show="date">
+            <time></time>
+          </current-date-time>
+        </div>
+        <h1
+          class="brightness-0 w-6 invert drop-shadow-sm place-self-center self-center"
+        >
+          😸
+        </h1>
+        <div
+          class="place-self-end self-center flex flex-row gap-1 brightness-0 invert drop-shadow-sm font-semibold text-xs"
+        >
+          <current-date-time data-show="time">
+            <time></time>
+          </current-date-time>
+        </div>
+      </header>
+      <main
+        class="max-w-4xl from-gray-500/20 to-gray-500/15 backdrop-blur-xl rounded-2xl overflow-hidden shadow-xl grid grid-cols-3 md:gap-4 p-4 md:p-6 lg:p-8 bg-gradient-to-br dark:from-white/15 dark:to-white/5 border border-black/15 dark:border-white/5"
+      >
+        <app-list></app-list>
+      </main>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      (function () {
+        const config = [
+          {
+            name: "Mastodon",
+            href: "https://nyan.lol",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" width="75" height="79" fill="none"><path fill="#6364FF" d="M73.84 17.49C72.696 9.002 65.3 2.312 56.53 1.016 55.05.797 49.444 0 36.458 0h-.097c-12.99 0-15.776.797-17.256 1.016-8.525 1.26-16.311 7.271-18.2 15.86-.909 4.23-1.006 8.919-.837 13.22.24 6.17.288 12.327.848 18.47a86.879 86.879 0 0 0 2.022 12.115c1.795 7.361 9.064 13.487 16.185 15.986a43.41 43.41 0 0 0 23.68 1.25 34.565 34.565 0 0 0 2.562-.701c1.91-.607 4.147-1.285 5.792-2.477a.187.187 0 0 0 .076-.144v-5.953a.175.175 0 0 0-.216-.17 65.637 65.637 0 0 1-15.367 1.796c-8.906 0-11.301-4.226-11.987-5.985a18.554 18.554 0 0 1-1.042-4.718.171.171 0 0 1 .136-.178.173.173 0 0 1 .08.002 64.383 64.383 0 0 0 15.115 1.795c1.225 0 2.446 0 3.67-.032 5.121-.144 10.52-.406 15.558-1.39.125-.025.251-.047.359-.079 7.947-1.526 15.51-6.316 16.279-18.445.029-.477.1-5.002.1-5.497.004-1.684.543-11.946-.079-18.251Z"/><path fill="#fff" d="M61.248 27.026v21.088h-8.356V27.648c0-4.31-1.796-6.507-5.448-6.507-4.015 0-6.026 2.6-6.026 7.735v11.202H33.11V28.875c0-5.134-2.014-7.734-6.03-7.734-3.63 0-5.444 2.198-5.444 6.507v20.466h-8.353V27.026c0-4.308 1.1-7.731 3.3-10.269 2.27-2.531 5.247-3.831 8.942-3.831 4.278 0 7.51 1.644 9.665 4.93l2.079 3.49 2.083-3.49c2.154-3.286 5.386-4.93 9.657-4.93 3.691 0 6.668 1.3 8.945 3.831 2.198 2.535 3.296 5.958 3.293 10.27Z"/></svg>`,
+          },
+          {
+            name: "Pixelfed",
+            href: "https://nyan.pics",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 50 50"><path fill="#eb0256" d="M25 24.958c-4.003-5.515-11.818-6.792-17.37-2.838a12.348 12.348 0 0 0-2.178 2.034c-3.65 4.35-3.842 10.69-.461 15.253l.3.421c-6.698-8.71-6.837-20.885-.339-29.746l.129-.154C9.198 4.531 17.024 3.472 22.429 7.58c5.464 4.068 6.617 11.91 2.557 17.38l.014-.002Z"/><path fill="#a63fdb" d="M25 24.958a12.248 12.248 0 0 0-7.612 15.714c2.253 6.442 9.36 9.934 15.835 7.778l.435-.144a25.046 25.046 0 0 1-24.516-4.45 25.194 25.194 0 0 1-3.844-4.021l-.307-.428c-3.387-4.563-3.197-10.906.456-15.26a12.325 12.325 0 0 1 2.176-2.034c5.554-3.958 13.375-2.677 17.377 2.845Z"/><path fill="#0087ff" d="M25 24.958c.07 6.825 5.672 12.416 12.497 12.471a12.233 12.233 0 0 0 12.337-12.323l.001-.155c.159 10.42-6.378 19.84-16.193 23.342l-.426.151C26.74 50.6 19.633 47.108 17.38 40.666a12.248 12.248 0 0 1 7.611-15.714l.008.006Z"/><path fill="#17c934" d="M25 24.958a12.302 12.302 0 0 0 13.325-3.744 12.276 12.276 0 0 0 2.277-4.115c2.035-6.508-1.59-13.543-8.07-15.662l-.535-.188c3.15.96 6.165 2.563 8.854 4.819 5.837 4.898 8.903 11.87 8.985 18.897l.006.148A12.227 12.227 0 0 1 37.497 37.43C30.672 37.374 25.07 31.783 25 24.96Z"/><path fill="#ff7725" d="M25 24.958c4.052-5.467 2.9-13.297-2.556-17.365-5.23-4.003-12.786-3.17-17.02 1.875-.123.146-.243.295-.359.447l-.12.16c6.226-8.35 17.1-11.898 27.052-8.826l.534.188c6.54 2.146 10.15 9.17 8.071 15.662-2.08 6.492-9.06 10.02-15.602 7.86Z"/><path fill="#fff" fill-rule="nonzero" d="M23.03 30.27h4.55c4.184.061 7.679-3.326 7.75-7.51-.071-4.184-3.566-7.571-7.75-7.51h-6.56l-.081-.001c-2.387 0-4.361 1.944-4.399 4.331v16.87l6.5-6.18h-.01Z"/></svg>`,
+          },
+          {
+            name: "Phanpy",
+            href: "https://phanpy.nyan.lol",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" width="64" height="64"><path fill="none" d="M0 0h63.994v63.994H0z"/><path fill="#a4bff7" d="M37.774 11.471c14.639 3.752 19.034 16.557 15.889 31.304-.696 3.261-2.563 6.661-6.356 8.693-3.204 1.717-8.07 2.537-15.338.55l-9.634-2.404C11.651 46.992 8.378 38.733 10.027 31.823c3.627-15.201 15.543-23.48 27.747-20.352Z"/><path fill="#d8e7fe" d="M36.76 15.429c12.289 3.15 15.547 14.114 12.907 26.493-.947 4.44-4.937 9.365-16.664 6.143l-9.684-2.417c-7.854-1.923-10.53-7.8-9.318-12.877 3.016-12.639 12.611-19.943 22.759-17.342Z"/><path fill="#6081e6" d="M27.471 24.991c-1.457-.698-7.229 3.213-7.663 8.926-.182 2.39 4.55 3.237 5.071-.169.725-4.743 3.715-8.218 2.592-8.757ZM38.217 26.996c-2.083.327-.382 5.901-.595 10.727-.123 2.8 4.388 3.464 4.703 2.011 1.098-5.073-2.066-13.058-4.108-12.738Z"/></svg>`,
+          },
+        ];
+
+        const statuses = [];
+
+        class AppList extends HTMLElement {
+          static tagName = "app-list";
+
+          static register(
+            tagName = this.tagName,
+            registry = globalThis.customElements,
+          ) {
+            registry?.define(tagName, this);
+          }
+
+          connectedCallback() {
+            this.classList.add("contents");
+            config.forEach(({ name, href, icon }) => {
+              const aEl = this.buildAnchor(href);
+              const iconEl = this.buildIcon(icon);
+              const nameEl = this.buildLabel(name);
+              aEl.appendChild(iconEl);
+              aEl.appendChild(nameEl);
+              this.appendChild(aEl);
+            });
+          }
+
+          buildAnchor(href) {
+            const aEl = document.createElement("a");
+            aEl.href = href;
+            aEl.classList.add(
+              "hover:bg-black/5",
+              "dark:hover:bg-white/10",
+              "flex",
+              "flex-col",
+              "items-center",
+              "w-50",
+              "group",
+              "rounded-xl",
+              "gap-2",
+              "p-3",
+              "transition-all",
+              "border",
+              "dark:hover:border-white/10",
+              "hover:border-black/15",
+              "border-transparent",
+              "active:bg-black/10",
+              "dark:active:bg-white/15",
+            );
+            return aEl;
+          }
+
+          buildIcon(icon, name) {
+            const iconEl = document.createElement("img");
+            iconEl.alt = `${name} icon`;
+            iconEl.src = `data:image/svg+xml,${encodeURIComponent(icon)}`;
+            iconEl.classList.add(
+              "w-full",
+              "aspect-square",
+              "flex",
+              "items-center",
+              "justify-around",
+              "w-12",
+              "md:w-14",
+              "group-hover:scale-105",
+              "transition-transform",
+              "ease-in-out",
+              "group-hover:rotate-3",
+              "group-active:scale-95",
+              "group-active:-rotate-3",
+              "drop-shadow",
+            );
+            return iconEl;
+          }
+
+          buildLabel(name) {
+            const nameEl = document.createElement("span");
+            nameEl.textContent = name;
+            nameEl.classList.add(
+              "block",
+              "font-bold",
+              "group-hover:underline",
+              "drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]",
+              "text-sm",
+              "md:text-base",
+            );
+            return nameEl;
+          }
+        }
+        AppList.register();
+
+        class CurrentDateTime extends HTMLElement {
+          static tagName = "current-date-time";
+
+          static register(
+            tagName = this.tagName,
+            registry = globalThis.customElements,
+          ) {
+            registry?.define(tagName, this);
+          }
+
+          connectedCallback() {
+            const show = this.dataset?.show || "date-time";
+            this.showDate = show.indexOf("date") >= 0;
+            this.showTime = show.indexOf("time") >= 0;
+            this.updateTime();
+            this.interval = setInterval(() => {
+              this.updateTime();
+            }, 1000);
+          }
+
+          disconnectedCallback() {
+            clearInterval(this.interval);
+          }
+
+          updateTime() {
+            const date = new Date();
+            const timeEl = this.querySelector("time");
+            timeEl.setAttribute("datetime", date.toISOString());
+            timeEl.textContent = this.formatDate(date);
+          }
+
+          formatDate(date) {
+            return new Intl.DateTimeFormat("en-US", {
+              weekday: this.showDate ? "short" : undefined,
+              month: this.showDate ? "short" : undefined,
+              day: this.showDate ? "numeric" : undefined,
+              hour: this.showTime ? "numeric" : undefined,
+              minute: this.showTime ? "numeric" : undefined,
+            })
+              .format(date)
+              .replace(",", "")
+              .split(" at ")
+              .reverse()
+              .join(" ");
+          }
+        }
+        CurrentDateTime.register();
+      })();
+    </script>
+  </body>
+</html>
